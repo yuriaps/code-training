@@ -15,8 +15,6 @@ function main(arr) {
     function rec(i) {
         // console.log(tmpArr);
         if (someAll(tmpArr) == 30) { console.log("Sucesso, arr:", tmpArr)}
-        
-        
 
         while(i < 6){
             console.log(tmpArr);
