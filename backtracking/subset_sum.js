@@ -1,7 +1,7 @@
 let arr = [5, 10, 12, 13, 15, 18]
 
 
-function someAll(arr) {
+function sumAll(arr) {
     return arr.reduce((total, curr) => total + curr ,0)
 }
 
@@ -14,7 +14,7 @@ function main(arr) {
 
     function rec(i) {
         // console.log(tmpArr);
-        if (someAll(tmpArr) == 30) { console.log("Sucesso, arr:", tmpArr)}
+        if (sumAll(tmpArr) == 30) { console.log("Sucesso, arr:", tmpArr)}
 
         while(i < 6){
             console.log(tmpArr);
