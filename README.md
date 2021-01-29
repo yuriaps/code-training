@@ -1,2 +1,2 @@
 # code-training
-Yuri Aps 
+Yuri Aps
