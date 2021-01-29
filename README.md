@@ -1,4 +1,2 @@
 # code-training
-# code-training
-# code-training
-"# code-training" 
+Yuri Aps 
