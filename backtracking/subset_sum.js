@@ -1,42 +1,59 @@
-let arr = [5, 10, 12, 13, 15, 18]
+function statement(invoice, plays) {
+    let totalAmount = 0;
+    let volumeCredits = 0;
+    let result = `Statement for ${invoice.customer}\n`;
+    const format = new Intl.NumberFormat("enUS",
+        {
+            style: "currency", currency: "USD",
+            minimumFractionDigits: 2
+        }).format;
+    for (let perf of invoice.performances) {
 
-
-function sumAll(arr) {
-    return arr.reduce((total, curr) => total + curr ,0)
+        let thisAmount = amountFor(perf, plays[perf.playID])
+        
+        // add volume credits
+        volumeCredits += Math.max(perf.audience - 30, 0);
+        // add extra credit for every ten comedy attendees
+    }
 }
 
-function main(arr) {
+function amountFor(aPerfomance,play){
+    let result = 0
+    switch (play.type) {
+        case "tragedy":
+            result = 40000;
+            if (aPerfomance.audience > 30) {
+                result += 1000 * (aPerfomance.audience - 30);
+            }
+            break;
+        case "comedy":
+            result = 30000;
+            if (aPerfomance.audience > 20) {
+                result += 10000 + 500 * (aPerfomance.audience - 20)
+                ;
+            }
+            result += 300 * aPerfomance.audience;
+            break;
+        default:
+            throw new Error(`unknown type: ${play.type}`);
 
+    }
+    return result
+}
 
-    let tmpArr = []
-
-    rec(0)
-
-    function rec(i) {
-        // console.log(tmpArr);
-        if (sumAll(tmpArr) == 30) { console.log("Sucesso, arr:", tmpArr)}
-
-        while(i < 6){
-            console.log(tmpArr);
-
-            // optimize code
-            // if (someAll(tmpArr) > 30) break;
-            
-            tmpArr.push(arr[i])
-
-            rec(i+1)
-
-            tmpArr.pop()
-            i++
-        }
-        
-
-        
+let invocices = {
+    "customer": "BigCo",
+        "performances": [
+            {
+                "playID": "hamlet",
+                "audience": 55
+            }
+        ]
     }
 
-
-
-
-}
-
-main(arr)
+let plays = {
+    "hamlet": {"name": "Hamlet", "type": "tragedy"},
+    "as­like": {"name": "As You Like It", "type": "comedy"},
+    "othello": {"name": "Othello", "type": "tragedy"}
+    }
+    
