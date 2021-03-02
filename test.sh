@@ -8,6 +8,6 @@ o hauhauuhahua
 olaaaaa
 ooooo
 git config --global push.followTags true
-ooooooooo
+oooooooooooo
 
 
