@@ -9,5 +9,5 @@ olaaaaa
 ooooo
 git config --global push.followTags true
 ooooooooooooooo
-ooooo
+ooooooooo
 
