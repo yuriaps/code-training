@@ -5,6 +5,6 @@ echo $var | awk -F. -v OFS=. 'NF==1{print ++$NF}; NF>1{$NF=sprintf("%0*d", lengt
 ooo
 o hauhauuhahua
 
-olaaaaa
+olaaaaaooo
 ooooooooooooooo
 git config --global push.followTags true
