@@ -11,3 +11,9 @@ git config --global push.followTags true
 ooooooooooooooo
 ooooooooo
 
+https://stackoverflow.com/questions/59838850/update-version-number-on-each-commit
+
+
+https://stackoverflow.com/questions/8653126/how-to-increment-version-number-in-a-shell-script
+@Sam
+
