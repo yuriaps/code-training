@@ -17,7 +17,7 @@ pipeline{
                     def major = versions[0]
                     def minor = versions[0] + '.' + versions[1]
                     def patch = version.trim()
-                    
+                sh 'echo $patch'
               withCredentials([usernamePassword(credentialsId: 'AzureServicePrincipal', passwordVariable: 'AZURE_CLIENT_SECRET', usernameVariable: 'AZURE_CLIENT_ID')]) {
                             sh 'az login --service-principal -u $AZURE_CLIENT_ID -p $AZURE_CLIENT_SECRET -t $AZURE_TENANT_ID'
                             sh 'az account set -s $AZURE_SUBSCRIPTION_ID'
@@ -32,7 +32,8 @@ pipeline{
         }
            stage('Deploying into k8s'){
             steps{
-                sh 'kubectl apply -f deployment.yml' 
+                // sh 'kubectl apply -f deployment.yml'
+                sh 'echo "not developed"' 
             }
         }
     }
