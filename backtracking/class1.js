@@ -48,7 +48,7 @@ let aa = 4
 let bb = 3
 let cc = 7
 
-if (aa > bb || bb > cc){
+if (aa > bb || bb > cc) {
   // console.log("first block");
 }
 
@@ -118,7 +118,7 @@ if (aa > bb || bb > cc){
 
 // // // console.log(numList.indexOf(9));
 
-// // console.log(numList);
+// // (numList);
 
 
 // // function a(num){
@@ -140,12 +140,12 @@ if (aa > bb || bb > cc){
 //   while(swap != -1){
 
 //     for(let i = 0; i < arr.length; i++){
-        
+
 
 //     }
 
 //   }
-  
+
 // }
 
 // function order(array) {
@@ -163,9 +163,25 @@ if (aa > bb || bb > cc){
 // }
 
 
-for (let i = 1;i<6;i++){
-  console.log("value of i: ", i);
-  for(let j = 1; j<4;j++){
-    console.log("value of j:", j);
+// for (let i = 1;i<6;i++){
+//   console.log("value of i: ", i);
+//   for(let j = 1; j<4;j++){
+//     console.log("value of j:", j);
+//   }
+// }
+
+
+function isValid(num) {
+
+  if (num != 2 && num > 8 && type0f(num == "number")) {
+    return true
+  }
+  else {
+    return false
   }
 }
+
+if(isValid(3)){
+  console.log("hello");
+}
+

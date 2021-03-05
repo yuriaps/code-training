@@ -4,6 +4,7 @@
   "description": "Yuri Aps",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/yuriaps/code-training/issues"
   },
-  "homepage": "https://github.com/yuriaps/code-training#readme"
+  "homepage": "https://github.com/yuriaps/code-training#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
